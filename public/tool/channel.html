@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Telegram View Bot</title>
+    <link
+      rel="stylesheet"
+      href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"
+    />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="custom.css" type="text/css">
+</head>
+  <body>
+    <div class="col-sm-6 col-sm-offset-3">
+      <h1>Telegram Channel Bot</h1>
+
+      <form action="process.php" method="POST">
+        <div id="name-group" class="form-group">
+         <label for="name">Channel Link</label>
+          <input
+            type="text"
+            class="form-control"
+            id="channel_link"
+            name="channel_link"
+          />
+          <br>
+          <label for="email">Password</label>
+          <input
+            type="text"
+            class="form-control"
+            id="password"
+            name="password"
+          />
+        </div>
+        
+        <button type="submit" class="btn btn-success">
+          Submit
+        </button>
+      </form>
+      <hr>
+        <button class="btn btn-success">
+          <a href="index.html">Add userBot</a>
+        </button>
+        <button class="btn btn-primary">
+          <a href="view.html">Buff View</a>
+        </button>
+          <button  class="btn btn-warning">
+          <a href="voice.html">Join Voice</a>
+        </button>
+        <button class="btn btn-success">
+          <a href="channel.html">Join Channel</a>
+        </button>
+
+    </div>
+  </body>
+<script type="text/javascript">
+  var flag= 0;
+  $(document).ready(function () {
+  $("form").submit(function (event) {
+
+    event.preventDefault();
+    
+       var formData = {
+        channel_link: $("#channel_link").val(),
+        password: $("#password").val()
+      };
+
+       $.ajax({
+        type: "POST",
+        url: "https://tool.maoe.io/join_channel",
+        data: JSON.stringify(formData),
+        datatype : "application/json",
+        contentType: "application/json",
+      }).done(function (data) {
+        alert("done!!")
+        window.location.reload()
+      }).fail(function (data) {
+        alert("fail!!")
+        window.location.reload()
+      });
+
+
+
+
+    
+  });
+});
+
+</script>
+
+</html>

@@ -1,0 +1,58 @@
+
+/* optional Container STYLES */
+/*.chart { height: 600px; width: 750px; margin: 5px; margin: 15px auto; border: 3px solid #DDD; border-radius: 3px; }*/
+
+.node { font-size: 15px; }
+
+.node.big-commpany { 
+	cursor: pointer;
+	padding: 0 2px;
+	min-width: 60px;
+	text-align: center;
+	height: 30px;
+	border: 2px solid #E8E8E3; 
+	border-radius: 2px;
+    min-width: 400px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.5);
+	/*background: #fff; */
+}
+.node.big-commpany:active { 
+	box-shadow: inset 1px 1px 1px rgba(0,0,0,.1); 
+	margin: 1px 0 0 1px; 
+	border: 2px solid #D3D3CB;
+}
+
+.node.big-commpany .node-name {
+	line-height: 30px;
+	font-size: 15px;
+	font-weight: 800;
+	color: white;
+}
+
+.node.big-commpany:hover .node-name {
+	color: white;
+
+	text-shadow: 1px 1px rgba(0,0,0,.15);
+}
+
+ .node-hide, .node-id, .node-type {
+ 	display: none;
+ }
+
+.node-name1 {
+	line-height: 30px;
+	font-size: 15px;
+	color: red;
+}
+
+ .node-name2 {
+	line-height: 30px;
+	font-size: 15px;
+	color: orange;
+}
+
+ .node-name3 {
+	line-height: 30px;
+	font-size: 15px;
+	color: green;
+}
